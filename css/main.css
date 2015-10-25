@@ -1,0 +1,481 @@
+/*  =========================================================================
+    Helper classes
+    ========================================================================= */
+
+/* Add the .hidden class to any elements that you want to hide
+    from all presentations, including screen readers. It could be an element
+    that will be populated later with JavaScript or an element you will hide
+    with JavaScript. Do not use this for SEO keyword stuffing.
+    That is just not cool. */
+
+    .hidden {
+        display: none !important;
+        visibility: hidden;
+    }
+
+/* Add the .visuallyhidden class to hide text from browsers
+    but make it available for screen readers. You can use this to hide text
+    that is specific to screen readers but that other users should not see. */
+
+    .visuallyhidden {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+
+    .visuallyhidden.focusable:active,
+    .visuallyhidden.focusable:focus {
+        clip: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        position: static;
+        width: auto;
+    }
+
+/* Add the .invisible class to any element you want to hide
+    without affecting layout. When you use display: none an element
+    is effectively removed from the layout. But in some cases
+    you want the element to simply be invisible while remaining
+    in the flow and not affecting the positioning of surrounding content. */
+
+    .invisible {
+        visibility: hidden;
+    }
+
+/* Adding .clearfix to an element will ensure that it always
+    fully contains its floated children. There have been many variants
+    of the clearfix hack over the years, and there are other hacks
+    that can also help you to contain floated children, but the HTML5
+    Boilerplate currently uses the micro clearfix. */
+
+    .clearfix:before,
+    .clearfix:after {
+        content: " ";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+/*  =========================================================================
+    Your CSS
+    ========================================================================= */
+
+    * { box-sizing: border-box; }
+    body { 
+        font-size: 16px;
+        background-image:url('../img/white-wood.jpg');
+        background-size: 100%;
+        font-family: 'Roboto', sans-serif;
+        }
+
+    .slicknav_menu {
+    display:none;
+    }
+
+    * {
+    margin:0;
+    border:0;
+    padding:0;
+    }
+
+    #wrapper {
+    width:90%;
+    max-width:1100px;
+    margin:0 auto;
+    }
+
+    /* Navigation */
+
+    li a {
+    color:white;
+    text-decoration: none;
+    background-color: gray;
+    
+    }
+
+    @media screen and (max-width: 47em) {
+    /* #menu is the original menu */
+    .js #menu {
+        display:none;
+    }
+
+    a {
+        text-align: center;
+
+    }
+    
+    .js .slicknav_menu {
+        display:block;
+    }
+    }
+
+
+
+    ul {
+    padding:0;
+    margin:auto;
+    }
+
+    h1 {
+    font-size: 1.5em;
+    text-align: center;
+    }
+
+    h2 {
+    text-align: center;
+    color:rgb(153,0,0);
+    }
+
+    h1, h2, h3 {
+        font-family: 'IM Fell English SC', serif;
+    }
+
+    #disappear {
+    display:none;
+    }
+
+    p {
+    display: block;
+    margin:0 auto;
+    margin-top:1em;
+    text-align: justify;
+    width:80%;
+
+    }
+
+
+    img {
+    width:80%;
+    max-width: 500px;
+    display:block;
+    margin:0 auto;
+    padding-top:1em;
+    }
+
+    header img {
+    display:none;
+    }
+
+    section, aside, article {
+
+    padding-bottom:1em;
+    padding-top:1em;
+    margin-bottom:1.5em;
+    background-image:url('../img/sand-texture1.png');
+    background-size: 100%;
+    }
+
+
+
+    @media screen and (min-width: 47em) {
+    header h1 {
+        display:none;
+    }
+
+    #disappear {
+        display:block;
+    }
+
+    nav {
+        margin-top: 1em;
+        margin-bottom:1em;
+    }
+
+    nav li {
+    display:inline-block;
+    width:16.1%;
+    margin: 0 auto;
+    padding:.5em;
+    text-align: center;
+    }
+
+    a:hover {
+        color:rgb(238,232,170);
+    }
+
+
+    nav a {
+        box-shadow: 7px 7px 5px gray;
+    }
+
+    
+
+    header img {
+    display:block;
+    max-width: 400px;
+    padding-top:0;
+    }
+
+
+    .grad {
+      background: -webkit-linear-gradient(rgba(96, 96, 96, 0.8), rgba(64, 64, 64, 0.8), rgba(96, 96, 96, 0.8)); /* For Safari 5.1 to 6.0 */
+      background: -o-linear-gradient(rgba(96, 96, 96, 0.8), rgba(64, 64, 64, 0.8), rgba(96, 96, 96, 0.8)); /* For Opera 11.1 to 12.0 */
+      background: -moz-linear-gradient(rgba(96, 96, 96, 0.8), rgba(64, 64, 64, 0.8), rgba(96, 96, 96, 0.8)); /* For Firefox 3.6 to 15 */
+      background: linear-gradient(rgba(96, 96, 96, 0.8), rgba(64, 64, 64, 0.8), rgba(96, 96, 96, 0.8)); /* Standard syntax */
+      display:block;
+      padding: .5em 1em .5em 1em;
+      border-radius: 3px;
+      }
+  
+      aside {
+        width:46%;
+        float:left;
+        margin-left:1%;
+        margin-right: 1%;
+      }
+
+      section {
+        float:left;
+        width:46%;
+        margin-left:1%;
+        margin-right: 1%;
+      }
+
+      footer {
+        clear:both;
+      }
+    }
+
+        @media screen and (min-width: 60em) {
+        a {
+            font-size:1.125em;
+        }
+    }
+
+        
+        
+
+    /* links */
+    section a {
+    text-decoration: none;
+    color:red;
+    border-bottom:1px gray dashed;
+    box-shadow: none;
+
+    }
+
+    section a:hover {
+        color:gray;
+    }
+
+    /* Footer */
+
+    footer {
+        color:white;
+        background-color: rgba(72, 72, 72, 0.9);
+        font-size: .7em;
+        padding:2em;
+    }
+
+
+    footer p {
+        margin-top:0;
+        text-align: center;
+    }
+
+    .floatleft {
+        float:left;
+    }
+
+    footer div img {
+        width:14%;
+        display:inline-block;
+        max-width: 40px;
+        margin:0 1% 0 1%;
+         
+              
+    }
+
+    footer div {
+        width:50%;
+        text-align: center;
+        
+
+            }
+
+    table {
+        margin:0 auto;
+    }
+
+    @media screen and (min-width: 33.125em){
+        footer {
+            font-size: .9em;
+        }
+    }
+
+
+    /* Menu Page */
+
+    main#menupage section{
+        width:100%;
+        font-size: .75em;
+    }
+
+    main#menupage p {
+        text-align:center;
+        padding-bottom:1em;
+    }
+
+    #menupage section {
+        float:none;
+        background-image: url(../img/sand-texture3.png);
+    }
+
+
+
+    @media screen and (min-width: 46.25em) {
+
+        h1 {
+        font-size: 3em;
+    }
+
+        h2 {
+        font-size: 1.75em;
+    }
+
+        main#menupage section {
+            font-size: 1em;
+        }
+
+    }
+
+    h3 {
+    text-align: center;
+    }
+
+    main#menupage span {
+        cursor:pointer;
+        border-bottom: 2px green dashed;
+    }
+
+
+    /* Directions Page */
+
+    #map_canvas {
+    
+    height: 400px;
+    max-width: 500px;
+    margin:3em 0 3em 0; 
+    margin: auto;
+    
+    }
+
+    article {
+    margin-top: 3em;
+    }
+
+    @media screen and (min-width: 47em) {
+    #map_canvas {
+        width:48%;
+        float:left;
+        margin-right:4%;
+    }
+
+    article {
+        width:48%;
+        float:left;
+        margin-top:0;
+    }
+
+    }
+
+    @media screen and (min-width: 71em){
+
+    div#map_canvas {
+        margin-bottom:3em;
+    }
+    }
+
+    /*  Additional Pages */
+
+    main#eventspage img {
+
+        margin-bottom: 5em;
+    }
+
+    main#contactpage img {
+
+        margin-bottom: 5em;
+    }
+
+    main#aboutpage img {
+
+        margin-bottom: 5em;
+    }
+
+    /* Media Page */
+
+    main#mediapage img {
+
+        margin-bottom: 1em;
+        width:30%;
+        margin-left:1%;
+        margin-right:1%;
+        display: inline-block;
+    }
+
+    main#mediapage iframe {
+        margin-bottom: 2em;
+        width:100%;
+        height:20em;
+    }
+
+    iframe {
+        display:block;
+        margin:0 auto;
+        width:80%;
+        max-width: 500px;
+        padding-top:1em;
+        }
+
+    @media screen and (min-width: 46.25em){
+
+        main#mediapage iframe {
+        height:20em;
+        width: 45%;
+        float:left;
+        margin: 2% 2% 2% 2%;
+        padding:0;
+    }
+}
+
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
